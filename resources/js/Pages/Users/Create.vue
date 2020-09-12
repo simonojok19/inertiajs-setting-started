@@ -24,7 +24,7 @@
 <script>
 import Layout from '../../Shared/Layout';
 export default {
-    props: [],
+    props: ['errors'],
     components: {
         Layout
     },
