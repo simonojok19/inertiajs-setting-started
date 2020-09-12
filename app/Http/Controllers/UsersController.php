@@ -23,13 +23,6 @@ class UsersController extends Controller
             'Users/Create'
         );
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request -> validate([
@@ -42,6 +35,7 @@ class UsersController extends Controller
             'password' => $request['password'],
             'email' => $request['email']
         ]);
+        return redirect() -> route('users.index') -> with('successMessage', 'User was successfully added');
     }
 
     /**
