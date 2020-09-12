@@ -2002,6 +2002,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['users'],
@@ -3068,15 +3081,49 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("Layout", [
-    _c("div", [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "my-5" }, [
+        _c(
+          "a",
+          { staticClass: "btn btn-primary", attrs: { href: "/users/create" } },
+          [_vm._v("Create User")]
+        )
+      ]),
+      _vm._v(" "),
       _c("table", { staticClass: "table table-striped" }, [
         _c("thead", [
-          _c("tr", { attrs: { scoped: "col" } }, [_vm._v("Name")]),
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
           _vm._v(" "),
-          _c("tr", { attrs: { scoped: "col" } }, [_vm._v("Email")]),
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
           _vm._v(" "),
-          _c("tr", { attrs: { scoped: "col" } }, [_vm._v("Actions")])
-        ])
+          _c("th", { attrs: { scope: "col" } }, [_vm._v("Actions")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.users, function(user) {
+            return _c("tr", { key: user.id }, [
+              _c("td", [_vm._v(_vm._s(user.name))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(user.email))]),
+              _vm._v(" "),
+              _c(
+                "td",
+                [
+                  _c(
+                    "inertia-link",
+                    { attrs: { href: "/users/" + user.id + "/edit" } },
+                    [_vm._v("Edit")]
+                  ),
+                  _vm._v("|\n                        "),
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("Delete")])
+                ],
+                1
+              )
+            ])
+          }),
+          0
+        )
       ])
     ])
   ])
