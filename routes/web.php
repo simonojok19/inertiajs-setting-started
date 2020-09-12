@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\UsersController;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -39,13 +38,5 @@ Route::get('/contact', function () {
         ]
     );
 });
-
-//Route::get('/users', function () {
-//    $users = User::all();
-//    return Inertia::render(
-//        'Index',
-//        ['users' => $users]
-//    );
-//});
 
 Route::get('users/', [UsersController::class, 'index']);
