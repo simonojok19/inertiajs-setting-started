@@ -1,4 +1,4 @@
-import Inertia from '@inertiajs/inertia-vue';
+import Inertia from 'inertia-vue';
 import Vue from 'vue'
 
 Vue.use(Inertia);
