@@ -36,3 +36,5 @@ Route::get('/contact', function () {
         ]
     );
 });
+
+Route::get('/users', 'UsersController@index') -> name('users.index');
