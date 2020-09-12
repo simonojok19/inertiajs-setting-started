@@ -24,3 +24,9 @@
         </article>
     </main>
 </template>
+
+<script>
+export default {
+    inject: ['page']
+}
+</script>
