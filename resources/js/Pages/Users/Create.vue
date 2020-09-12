@@ -39,7 +39,10 @@ export default {
     },
     methods: {
         createUser() {
-            alert('Creating Users');
+            this.$inertia.post('/users', this.form)
+            .then((res) => {
+                console.log(res)
+            }).catch(console.error);
         }
     }
 }

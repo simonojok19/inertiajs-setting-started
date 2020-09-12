@@ -2029,7 +2029,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     createUser: function createUser() {
-      alert('Creating Users');
+      this.$inertia.post('/users', this.form).then(function (res) {
+        console.log(res);
+      })["catch"](console.error);
     }
   }
 });
