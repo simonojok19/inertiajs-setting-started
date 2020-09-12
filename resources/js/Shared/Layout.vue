@@ -6,10 +6,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">S
-                    <li class="nav-item active">
-                        <inertia-link class="nav-link" href="/">Home <span class="sr-only">(current)</span></inertia-link>
-                    </li>
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <inertia-link class="nav-link" href="/">Home</inertia-link>
                     </li>

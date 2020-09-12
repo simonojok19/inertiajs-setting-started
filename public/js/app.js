@@ -3083,25 +3083,6 @@ var render = function() {
           },
           [
             _c("ul", { staticClass: "navbar-nav" }, [
-              _vm._v("S\n                "),
-              _c(
-                "li",
-                { staticClass: "nav-item active" },
-                [
-                  _c(
-                    "inertia-link",
-                    { staticClass: "nav-link", attrs: { href: "/" } },
-                    [
-                      _vm._v("Home "),
-                      _c("span", { staticClass: "sr-only" }, [
-                        _vm._v("(current)")
-                      ])
-                    ]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
               _c(
                 "li",
                 { staticClass: "nav-item" },
