@@ -27,6 +27,6 @@
 
 <script>
 export default {
-    inject: ['page']
+    // inject: ['page']
 }
 </script>

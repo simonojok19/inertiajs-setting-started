@@ -2012,6 +2012,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['errors'],
@@ -2147,8 +2150,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({
-  inject: ['page']
+/* harmony default export */ __webpack_exports__["default"] = ({// inject: ['page']
 });
 
 /***/ }),
@@ -3184,6 +3186,16 @@ var render = function() {
   return _c("Layout", [
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "col-md-6" }, [
+        Object.keys(_vm.errors).length > 0
+          ? _c("div", { staticClass: "alert alert-danger mt-4" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.errors[Object.keys(_vm.errors)[0]][0]) +
+                  "\n            "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
         _c(
           "form",
           {
