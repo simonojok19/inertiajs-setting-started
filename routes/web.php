@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia\Inertia::render(
+    return Inertia::render(
         'Welcome', [
             'foo' => 'bar'
         ]
@@ -22,7 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return Inertia\Inertia::render(
+    return Inertia::render(
         'About', [
             'foo' => 'bar'
         ]
@@ -30,11 +32,17 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', function () {
-    return Inertia\Inertia::render(
+    return Inertia::render(
         'Contact', [
             'foo' => 'bar'
         ]
     );
 });
 
-Route::get('/users', 'UsersController@index') -> name('users.index');
+Route::get('/users', function () {
+    $users = User::all();
+    return Inertia::render(
+        'Index',
+        ['users' => $users]
+    );
+});
