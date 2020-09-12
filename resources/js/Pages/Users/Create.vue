@@ -36,6 +36,11 @@ export default {
                 password: ''
             },
         };
+    },
+    methods: {
+        createUser() {
+            alert('Creating Users');
+        }
     }
 }
 </script>
