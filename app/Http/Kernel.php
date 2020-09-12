@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Inertia\Middleware;
 
 class Kernel extends HttpKernel
 {
@@ -25,11 +26,12 @@ class Kernel extends HttpKernel
 
     /**
      * The application's route middleware groups.
-     *
+     *S
      * @var array
      */
     protected $middlewareGroups = [
         'web' => [
+            \Inertia\Middleware::class,
             \App\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
