@@ -2017,6 +2017,15 @@ __webpack_require__.r(__webpack_exports__);
   props: [],
   components: {
     Layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      form: {
+        name: '',
+        email: '',
+        password: ''
+      }
+    };
   }
 });
 
@@ -3134,6 +3143,7 @@ var render = function() {
             on: {
               submit: function($event) {
                 $event.preventDefault()
+                return _vm.createUser($event)
               }
             }
           },

@@ -2,7 +2,7 @@
     <Layout>
         <div class="container">
             <div class="col-md-6">
-                <form action="/users" method="post" class="my-5" @submit.prevent>
+                <form action="/users" method="post" class="my-5" @submit.prevent="createUser">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Name" v-model="form.name">
@@ -27,6 +27,15 @@ export default {
     props: [],
     components: {
         Layout
+    },
+    data() {
+        return {
+            form: {
+                name: '',
+                email: '',
+                password: ''
+            },
+        };
     }
 }
 </script>
