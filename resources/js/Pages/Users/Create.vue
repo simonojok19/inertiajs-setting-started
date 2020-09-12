@@ -2,7 +2,21 @@
     <Layout>
         <div class="container">
             <div class="col-md-6">
-                form goes here
+                <form action="/users" method="post" class="my-5" @submit.prevent>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" v-model="form.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Name" v-model="form.email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Name" v-model="form.password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create User</button>
+                </form>
             </div>
         </div>
     </Layout>
